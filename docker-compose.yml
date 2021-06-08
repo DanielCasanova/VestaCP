@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  vesta:
+    build: .
+    container_name: vesta
+    hostname: hexbin.net
+    ports:
+        - "3322:22"
+        - "80:80"
+        - "443:443"
+        - "9088:8083"
+        - "25:25"
+        - "110:110"
+        - "143:143"
+        - "465:465"
+        - "993:993"
+        - "995:995"
+    labels:
+      - "Vesta Control Panel"
+    restart: always
